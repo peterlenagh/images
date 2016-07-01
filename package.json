@@ -1,0 +1,25 @@
+{
+  "name": "images",
+  "version": "1.0.0",
+  "description": "Batch generate images w/ gulp tasks and host them on a gh-pages accessible repo.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterlenagh/images.git"
+  },
+  "author": "Peter Lenagh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterlenagh/images/issues"
+  },
+  "homepage": "https://github.com/peterlenagh/images#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-filter": "^4.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-responsive": "^2.4.0"
+  }
+}
