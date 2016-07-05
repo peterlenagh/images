@@ -9,20 +9,23 @@ var filter = require('gulp-filter');
 gulp.task('360-images', function styles() {
     gulp.src('./assets/shirtguide-images/raw/**/*.*')
     .pipe(rename(function renamefunc(path) {
-        var num = path.basename.split('-')[1];
         // ok so the files end in numbers but they start at apparently random numbers so we need to normalise
         var arbitraryNumber = 0;
+        var num = path.basename.split('_').pop();
+
         if (path.dirname.indexOf('Pinpoint') > -1) {
+            var num = path.basename.split('-')[1];
             arbitraryNumber  = 431;
         }
         if (path.dirname.indexOf('Broadcloth') > -1) {
+            var num = path.basename.split('-')[1];
             arbitraryNumber  = 227;
         }
         if (path.dirname.indexOf('Transparent') > -1) {
+            var num = path.basename.split('-')[1];
             arbitraryNumber  = 227;
         }
         if (path.dirname.indexOf('retouched') > -1) {
-            var num = path.basename.split('_').pop();
             arbitraryNumber  = 104;
         }
         path.basename = num - arbitraryNumber;
