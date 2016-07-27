@@ -13,21 +13,21 @@ gulp.task('360-images', function styles() {
         var arbitraryNumber = 0;
         var num = path.basename.split('_').pop();
 
-        if (path.dirname.indexOf('Pinpoint') > -1) {
-            var num = path.basename.split('-')[1];
-            arbitraryNumber  = 431;
-        }
-        if (path.dirname.indexOf('Broadcloth') > -1) {
-            var num = path.basename.split('-')[1];
-            arbitraryNumber  = 227;
-        }
-        if (path.dirname.indexOf('Transparent') > -1) {
-            var num = path.basename.split('-')[1];
-            arbitraryNumber  = 227;
-        }
-        if (path.dirname.indexOf('retouched') > -1) {
-            arbitraryNumber  = 104;
-        }
+        //if (path.dirname.indexOf('Pinpoint') > -1) {
+        //    var num = path.basename.split('-')[1];
+        //    arbitraryNumber  = 431;
+        //}
+        //if (path.dirname.indexOf('Broadcloth') > -1) {
+        //    var num = path.basename.split('-')[1];
+        //    arbitraryNumber  = 227;
+        //}
+        //if (path.dirname.indexOf('Transparent') > -1) {
+        //    var num = path.basename.split('-')[1];
+        //    arbitraryNumber  = 227;
+        //}
+        //if (path.dirname.indexOf('retouched') > -1) {
+        //    arbitraryNumber  = 104;
+        //}
         path.basename = num - arbitraryNumber;
     }))
     .pipe(responsive(
